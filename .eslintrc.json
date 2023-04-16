@@ -1,0 +1,61 @@
+{
+    "parser": "@typescript-eslint/parser", // Specifies the ESLint parser
+    "parserOptions": {
+        "ecmaVersion": 2020, // Allows for the parsing of modern ECMAScript features
+        "sourceType": "module" // Allows for the use of imports
+    },
+    "extends": [
+        "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin`
+        "prettier",
+        "plugin:prettier/recommended" // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.`
+    ],
+    "rules": {
+        "no-console": "error", // Prevent usage of console.log() in production code
+        "no-alert": "error", // Prevent usage of alert() in production code
+        "no-debugger": "error", // Prevent usage of debugger statements in production code
+        "no-empty": "error", // Prevent usage of empty block statements
+        "no-extra-semi": "error", // Warn about unnecessary semicolons
+        "no-unused-labels": "error", // Warn about unused labels
+        "no-unreachable": "error", // Warn about unreachable code
+        "no-use-before-define": "error", // Warn about usage of variables before they are defined
+        "no-shadow": "error", // Prevent usage of variable names that conflict with function parameters
+        "no-eval": "error", // Prevent usage of the eval() function
+        "no-implied-eval": "error", // Prevent usage of implied eval()
+        "no-iterator": "error", // Prevent usage of the __iterator__ property
+        "no-proto": "error", // Prevent usage of the __proto__ property
+        "no-script-url": "error", // Prevent usage of javascript: URLs
+        "no-self-compare": "error", // Prevent comparisons to oneself
+        "no-throw-literal": "error", // Only throw Error objects
+        "require-await": "error", // Ensure async functions have an await expression inside them
+        "wrap-iife": ["error", "inside"], // Enforce wrapping function expressions in parentheses
+        "yoda": "error", // Enforce "yoda" conditions (literal value on the left, variable on the right)
+
+        // Stylistic Issues
+        "comma-dangle": ["error", "always-multiline"], // Enforce trailing commas for multiline object/array literals
+        "comma-spacing": "error", // Enforce spacing around commas
+        "semi": ["error", "always"], // Enforce semicolons at the end of statements
+        "quotes": ["error", "double"], // Enforce double quotes for strings
+        "brace-style": ["error", "1tbs"], // Enforce "one true brace" style
+        "indent": ["error", "tab"], // Enforce the use of tabs instead of spaces
+        "no-multi-spaces": "error", // Warn about multiple spaces in code
+        "no-trailing-spaces": "error", // Warn about trailing whitespace in code
+        "space-in-parens": ["error", "never"], // Enforce no spaces inside parentheses
+        "space-before-blocks": ["error", "always"], // Enforce a space before blocks
+        "space-before-function-paren": ["error", "never"], // Enforce no space before function parentheses
+        "space-infix-ops": "error", // Enforce spaces around infix operators
+        "no-extra-parens": "error", // Warn about unnecessary parentheses
+        "no-var": "error", // Disallow the use of the 'var' keyword
+        "prefer-template": "error", // Require the use of template literals instead of string concatenation
+        "prefer-arrow-callback": "error", // Require the use of arrow functions for callbacks
+
+        // Variables
+        "no-unused-vars": ["error", { "args": "none" }], // Warn about unused variables (excluding function arguments)
+        "no-undef": "error", // Warn about usage of undefined variables
+
+        // Expressions
+        "no-unused-expressions": "error", // Warn about unused expressions
+
+        // Restricted syntax
+        "no-restricted-syntax": ["error", "WithStatement"] // Disallow the use of 'with' statement
+    }
+}
